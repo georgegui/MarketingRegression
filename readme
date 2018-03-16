@@ -1,0 +1,5 @@
+- this package also requires another helper function package CommonFunctions
+- for convenience, save the CommonFunctions and DemandEstimation folders under the same path, I save them in
+  '~/Workspace-George', so I recommend replacing all '~/Workspace-George' with your own path.
+- the R/ folder contains necessary functions that could be compiled
+- the main_scripts/ contains main demand estimation scripts

@@ -1,0 +1,27 @@
+Package: DemandEstimation
+Type: Package
+Title: Demand Estimation Using Nielsen Data
+Version: 0.2.0
+Author: George Gui
+Maintainer: George Gui <guizhida@gmail.com>
+Description: This package uses various methods to perform demand estimation on
+  the Nielsen marketing data. It mainly focus on brand level data after
+  aggregation. Formatting functions can be found at CommonFunctions
+  package.
+License: MIT
+LazyData: TRUE
+Imports:
+  bayesm,
+  data.table,
+  data.tree,
+  ggplot2,
+  gridExtra,
+  CommonFunctions,
+  GGally,
+  Matrix,
+  MatrixModels,
+  glmnet,
+  hexbin,
+  lfe,
+  zoo,
+RoxygenNote: 6.0.1

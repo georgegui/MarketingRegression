@@ -1,0 +1,22 @@
+    field                                , value,description,discussion
+    promotion_own                         ,1,whether include own promotion dummy,
+    promotion_all                         ,0,whether include promotion dummy of both own and competing brands,
+    promotion_interaction_own             ,0,whether include own promotion interaction,little variation for promoted price
+    promotion_interaction_all             ,0,whether include promotion interaction of both own and competing brands,
+    n_max_competing_brands                ,5,the maximum number of competing brands considered for each module,limit the dimension of the estimation
+    lhs_perc_total_revenue_covered        ,0.8,the percentage of overall revenue covered by top brands selected as LHS variables,"filter small products, the overall revenue is the sum of revenues of all products in all categories"
+    rhs_perc_module_revenue_covered       ,0.8,the percentage of module revenue covered by top brands selected as RHS controls,filter small product controls within a category
+    min_nstores_per_zip3                  ,5,the minimum number of stores per ZIP3 for a ZIP3 to be selected,too few stores in a zip3 does not work well with regional-time controls
+    min_nstores_per_chain                 ,5,the minimum number of stores per Chain for a Chain to be selected,"In an IV model that were previously tried, Hausman instruments relies on the price of other stores in the same Chain"
+    min_nstores_per_brand                 ,5,the minimum number of stores per brand for a brand to be selected,too few stores in a brand does not work well with regional-time controls
+    min_nweeks_per_store_brand            ,120,the minimum number of week observation per store brand combination,too few data-points in an estimation can be problematic
+    min_nzip3s_per_chain              ,1,the minimum number of ZIP3 per Chain for a Chain to be selected,The IV model would not work if a chain only exists in one region
+    min_nprices_per_store_brand           ,4,the minimum number of unique prices per store brand combination,"too few price variation lead to all kinds of collinearity, usually with promotion, in Sparse regression "
+    log_sales_added_by_1                  ,1,whether add sales by 1 before taking the log,"if sales is 0, impossible to take log"
+    remove_0_sale_weeks                   ,0,whether to remove weeks with 0 sales,"if the actual sale of a 0-sale observation in a brand store is systematically higher than log(1), the estimation may have problems"
+    min_nonzero_sales_perc_per_store_brand,0,the minimum percentage of 0 sales per per store brand combination,some stores have a high percentage of 0 sales that the estimations seem to not make sense
+    demean_before_estimation              ,1,whether to demean before the estimation,"demean before estimation result in faster estimation at the cost of not strictly following FWL theorem; will be 1 for Bayes and OLS_demean, and 0 for others"
+    log_sales                             ,1,whether to take the log of the sales,for future extension
+    log_price                             ,1,whether to take the log of the price,for future extension
+year_start,2008,,
+year_end,2010,,
